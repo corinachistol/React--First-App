@@ -1,13 +1,16 @@
 import { Component } from "react";
+import Button from "./btn/Button";
 
 class App extends Component {
-  render() {
-    return <div className="App">
 
-      <h1>First React JS App </h1>
-      
-    </div>
-  }
+  render() {
+    return ( 
+      <div>
+        <Button label="Button One" color="red" />   
+        <Button label="Button Two" color="green" />  
+      </div>
+
+  )}
 }
 
 //main app component
@@ -33,4 +36,8 @@ export default App;
 //JSX - lib ne permite sa scrim cod compact, si sub capota sta un cod lung --> datorita caruia combina cele doua metode de mai sus
 
 // HTM: like syntax + DOM OOP 
+
+// <App>
+//  <Button />
+// </App>
 

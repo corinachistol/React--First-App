@@ -1,36 +1,29 @@
-import { Component } from "react";
+
 import "./Button.css"
 
+//functional component
+export default function Button (props) {
+    console.warn("A button has been created")
 
-class Button extends Component {
+    console.warn("A button has been mounted")
 
-    //capture the construction phase
-    constructor(props) {
-        super(props)
-        console.warn("A button has been created")
-    }
-
-    //capture the END of MOUNT phase
-    componentDidMount() {
-        console.warn("A button has been mounted")
-    }
-
-
-    handleClick() {
-        console.log(`btn ${this.props.label} clicked`)
-    }
-
-   render() {
     console.warn("A button has been rendered")
-    return ( 
-    <button 
-        onClick={this.handleClick.bind(this)}
-        className={this.props.color}
-    >
-        {this.props.label}
-    </button>
 
-  )}
+    function handleClick() {
+        console.log(`btn ${props.label} clicked`)
+    }
+
+    return ( 
+        <button 
+            onClick={handleClick}
+            className={props.color}
+        >
+            {props.label}
+        </button> 
+    )
+
 }
 
-export default Button
+
+
+// export default Button

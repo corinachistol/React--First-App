@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./Button.css"
 
-
+//this, binding, more code, statik like coding
 class Button extends Component {
 
     //capture the construction phase
